@@ -1,29 +1,26 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
-import axios from 'axios';
-import React, { useState } from 'react'
-import { useEffect } from 'react'
-const Apiget = () => {
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+
+const Apiget2 = () => {
     useEffect(()=>{
-        // axios.get("url").then().catch()
-        axios.get("https://jsonplaceholder.typicode.com/users")
-        .then((res)=>{
-         console.log(res);
-         setOutput(res.data)
-         
+        axios.get("https://jsonplaceholder.typicode.com/users").then((res)=>{
+            console.log(res)
+            setOutput(res.data)
+        }).catch((e)=>{
+            console.log(e)
+        })
 
-      }).catch((e)=>{
-        console.log(e);
-      })
-     },[]);
-     var [output,setOutput]=useState([])
+
+    },[]);
+
+    var [output,setOutput]=useState([])
   return (
+    
     <div>
-{/* useEffect is function used to diplay the data whrn the page is loaded useEffect(()=>{},[]) */}
-{/* useEffect(()=>{},[]) */}
-
       <Typography
         variant='h3'>
-      Axios</Typography>
+      Table</Typography>
       <TableContainer>
         <Table>
             <TableHead>
@@ -52,4 +49,4 @@ const Apiget = () => {
   )
 }
 
-export default Apiget
+export default Apiget2
