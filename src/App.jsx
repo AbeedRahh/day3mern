@@ -14,8 +14,9 @@ function App() {
 
   return (
     <>
-    <CardApi2/>
     {/* <CardApi/> */}
+
+    <CardApi2/>
     {/* <Apiget2/> */}
     {/* <Apiget/> */}
      {/* <Textinput/> */}
